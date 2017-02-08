@@ -12,18 +12,18 @@ Pod::Spec.new do |s|
   s.header_mappings_dir  = "Classes"
 
   s.subspec 'Proxying' do |pr|
-    pr.header_mappings_dir = "Classes/Proxying"
+    pr.public_header_files = 'Classes/Proxying/*.h'
     pr.source_files = "Classes/Proxying/**/*.{h,m}"
     pr.dependency 'CrutchKit/Runtime'
   end
 
   s.subspec 'Runtime' do |rn|
-    rn.header_mappings_dir = "Classes/Runtime"
+    rn.public_header_files = "Classes/Runtime/*.h"
     rn.source_files = "Classes/Runtime/**/*.{h,m}"
   end
 
   s.subspec 'Helpers' do |hlp|
-    hlp.header_mappings_dir = "Classes/Helpers"
+    hlp.public_header_files = "Classes/Helpers/*.h"
     hlp.source_files = "Classes/Helpers/**/*.{h,m}"
   end
 
