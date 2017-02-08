@@ -9,7 +9,7 @@
 #ifndef CDRuntime_h
 #define CDRuntime_h
 
-#import "CDProtocol/CDProtocol.h"
-#import "CDSelector/CDSelector.h"
+#import "CDProtocol.h"
+#import "CDSelector.h"
 
 #endif /* CDRuntime_h */
