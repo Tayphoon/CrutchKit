@@ -9,31 +9,27 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.platform     = :ios, "7.0"
   s.source       = { :git => "https://github.com/CognitiveDisson/CrutchKit.git", :tag => s.version.to_s }
-  s.header_mappings_dir  = "Classes"
 
   s.subspec 'Proxying' do |pr|
-    pr.public_header_files = 'Classes/Proxying/*.h'
-    pr.source_files = "Classes/Proxying/**/*.{h,m}"
+    pr.source_files = 'Classes/Proxying/CDProxying.h', 'Classes/Proxying/**/*'
     pr.dependency 'CrutchKit/Runtime'
   end
 
   s.subspec 'Runtime' do |rn|
-    rn.public_header_files = "Classes/Runtime/*.h"
-    rn.source_files = "Classes/Runtime/**/*.{h,m}"
+    rn.source_files = 'Classes/Runtime/CDRuntime.h', 'Classes/Runtime/**/*'
   end
 
   s.subspec 'Helpers' do |hlp|
-    hlp.public_header_files = "Classes/Helpers/*.h"
-    hlp.source_files = "Classes/Helpers/**/*.{h,m}"
+    hlp.source_files = 'Classes/Helpers/CDHelpers.h', 'Classes/Helpers/**/*'
   end
 
   s.subspec 'AnimationHandling' do |an|
-    an.source_files = "Classes/AnimationHandling/**/*.{h,m}"
+    an.source_files = 'Classes/AnimationHandling/**/*'
     an.dependency 'CrutchKit/Helpers'
   end
 
   s.subspec 'Debug' do |dbg|
-    dbg.source_files = "Classes/Debug/**/*.{h,m}"
+    dbg.source_files = 'Classes/Debug/**/*'
   end
 
 end
